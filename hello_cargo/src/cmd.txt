@@ -1,0 +1,4 @@
+Commands to build with cargo are :
+1) cargo build -->  creates a binary file in target/debug folder
+2) cargo run --> it compiles and runs the file
+3) cargo check --> it checks if the code compiles or not
