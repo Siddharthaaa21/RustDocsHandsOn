@@ -6,6 +6,9 @@
 // fn another_function() {
 //     println!("Hello, world! inside the funtion");
 // }
+
+
+//for char type ": char" instead ":i32"
 use std::io;
 fn main(){
     println!("hello world");
