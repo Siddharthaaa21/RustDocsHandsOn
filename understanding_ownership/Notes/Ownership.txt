@@ -1,0 +1,13 @@
+-> rules that governs how the memory is managed in Rust at compile time.
++ it ensures memory safety and data races are avoided. (also no garbage value  collector)
++ it is a system programming language that runs blazingly fast, prevents segfaults (segfaults are common conditions that causes program crash ), and guarantees thread safety.
+
+-> it enforces three key rules:
++ ownership- each valye has a single owner at a time.
++ borrowing- multiple regerences to a value can be borrowed but only one can be mutable at a time.
++ lifetimes- references must adhere to strict lifetime scopes to prevent invalid memory access.
+
+
+The concept od ownershit eliminates common programming issues like dandling pointers data races and double frees.
+-> it is a stack based memory management system.
+-> it is a statically typed language.
