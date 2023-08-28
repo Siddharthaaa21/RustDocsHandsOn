@@ -1,0 +1,23 @@
+Data types in rust:
+-1: scaler types: int, float, bool, char has signed and unsigned values 
+i8,i16,i32,i64,i128, isize and u8,u16,u32,u64,u128,usize these annoation are important other wise error is passes 
+for eg let var: u32 = "42".parse().expect("Not a number!"); 
+for floating types f is used instead of i for eg f32, f64 just.
+for boolean type bool is used for eg let var: bool = true;
+for character type char is used for eg let var: char = 'z';
+
+
+
+-2: compound types: tuple, array
+they are the grouping ones!
+for tupple => let tup: (int 32, f64, u8)= (400,1.5.1,2);
+ let tup=(500,1.5,1);
+ let (x,y,z)= tup;
+ println!("the value of y is {}",y);
+
+
+for array=> let arr =[1,2,3,4,5,6,7,8,9,10];
+            let arr: [i32;5] =[1,2,3,4,5]; // here we are defining the size of the array
+            let arr = [3;5]; // here we are defining the value of the array and size is 5 ====> displays as [3,3,3,3,3]
+            let months=["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+            indexing is same as other 0,....n-1;
