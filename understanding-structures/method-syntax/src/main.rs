@@ -1,15 +1,30 @@
 #[derive(Debug)]
+
+struct Rectangle{
+    width: u32,
+    height: u32,    
+}
+impl Rectangle{
+    //impl is implementation fir the block of rectangle
+    
+    fn area(&self)->u32{
+        //self is the reference in the methode.
+        //&self is used to borrow the value from the struct
+        self.width*self.height
+    }
+}
+
 fn main() {
 
-    let rec1 =rectangle{
+    let rec1 =Rectangle{
         width: 30,
         height: 50,
     };  
-    let rec2=rectangle{
+    let rec2=Rectangle{
         width: 33,
         height: 50,
     }; 
-    let rec3=rectangle{
+    let rec3=Rectangle{
         width: 36,
         height: 50,
     }; 
@@ -17,20 +32,6 @@ fn main() {
     println!("The area of the rectangle 2 is {} square pixels.", rec2.area());
     println!("The area of the rectangle 3 is {} square pixels.", rec3.area());
 }
-struct rectangle{
-    width: u32,
-    height: u32,    
-}
-impl rectangle{
-    //impl is implementation fir the block of rectangle
-    
-    fn area(&self)->u32{
-        ///self is the reference in the methode.
-        //&self is used to borrow the value from the struct
-        self.width*self.height
-    }
-}
-
 //mutlioke impl blocks are allowed
 //associated functions are allowed
 
