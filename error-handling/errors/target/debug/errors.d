@@ -1,1 +1,1 @@
-/mnt/e/Github/RustDocsHandsOn/error-handling/errors/target/debug/errors: /mnt/e/Github/RustDocsHandsOn/error-handling/errors/src/main.rs
+E:\Github\RustDocsHandsOn\error-handling\errors\target\debug\errors.exe: E:\Github\RustDocsHandsOn\error-handling\errors\src\main.rs
