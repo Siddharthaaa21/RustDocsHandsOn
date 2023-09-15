@@ -3,7 +3,7 @@
 //humans and cats  share certain traits so therefor we can use traits to define them
 
 traits Animal{
-    fn name(&self)-> 
+    fn name(&self)->  String; 
 }
 
 fn traits(){
