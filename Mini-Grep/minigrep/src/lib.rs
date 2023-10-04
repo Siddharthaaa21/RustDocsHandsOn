@@ -1,20 +1,21 @@
-//root of our library crate
 use std::env;//import a module from standard library to use env::args() method to get command line arguments
 use std::fs;//import a module from standard library to use fs::read_to_string() method to read the contents of a file  
 use std::process;
-use std::error::Error;  
-//import a module from standard library to use process::exit() method to exit the program
+use std::error::Error;
+ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
-pub fn run (config: Config){
-  let content = fs::read_to_string(config.filename).expect("something went wrong");
-  println!("With text:\n{}", content);
+  let contents = fs::read_to_string(config.filename)?;
+  println!("With text:\n{}", contents);
+  Ok(())
 }
-pub struct Config{
-  pub query:String,
+  
+
+ pub struct Config{
+   pub query:String,
   pub filename:String,
 }
 impl Config{
-  fn new(args: &[String]) -> Result<Config, &str> {
+  pub fn new(args: &[String]) -> Result<Config, &str> {
     if args.len() < 3 {
       return Err("not enough arguments");
     }
@@ -22,23 +23,6 @@ impl Config{
     let filename = args[2].clone();
     Ok(Config { query, filename })
   }
-    
 }
-
   
-
-fn main(){
-    let args : Vec<String> = env::args().collect();// collect() method to turn iterator into a collection and store it into vector of args
-  println!("{:?}", args );//{:?} is used to print the vector of string
-
-//store query and call it now
-let config=Config::new(&args).unwrap_or_else(|err|{
-  println!("Problem parsing arguments: {}", err);
-  process::exit(1);
-});
-println!("Searching for {}", config.query);
-println!("in file {}", config.filename);
-run(config);
-
-
-}
+  
