@@ -14,6 +14,7 @@ RUN mkdir -p ./src
 COPY ./src ./src
 
 # Build the Rust application
+
 RUN cargo build --release
 
 # Create a new stage for the final image
